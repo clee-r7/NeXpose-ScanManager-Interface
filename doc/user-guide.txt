@@ -37,5 +37,3 @@ conditional_scan =
     }
 
 scan_manager.add_conditional_device_scan conditional_scan
-This file was modified by JetBrains RubyMine 3.1.1 for binding GitHub repository
-This file was modified by JetBrains RubyMine 3.1.1 for binding GitHub repository
