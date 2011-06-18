@@ -94,6 +94,7 @@ class ScanManager
                 if res
                   puts "Scan started scan ID: #{res[:scan_id]}, on engine ID: #{res[:engine_id]}"
                   @conditional_device_scans.delete_at i
+                  @scans_observed << res[:scan_id]
                 else
                   put "Scan start failed for site #{site}"
                 end

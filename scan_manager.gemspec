@@ -3,8 +3,9 @@ require 'rake'
 
 Gem::Specification.new do |spec|
 	spec.name = 'nexpose_scan_manager'
-	spec.version = '0.0.3'
+	spec.version = '0.0.4'
 	spec.platform=Gem::Platform::RUBY
+  spec.homepage='https://github.com/chrlee/NeXpose-ScanManager-Interface'
   spec.description=
 <<Description
 	NeXpose Scan Manager is used for launching and asynchronous polling and processing of NeXpose scans

@@ -1,9 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="RUBY_MODULE" version="4">
+  <component name="GemRequirementsHolder" version="3">
+    <requirement>
+      <requirement>
+        <dependency name="eventmachine-eventmachine" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source manual="true" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="hirb" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source manual="true" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="librex" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source manual="true" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="nexpose" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source manual="true" />
+    </requirement>
+  </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] bundler (v1.0.13, C:/Ruby192/lib/ruby/gems/1.9.1/gems/bundler-1.0.13)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] hirb (v0.4.5, C:/Ruby192/lib/ruby/gems/1.9.1/gems/hirb-0.4.5)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] eventmachine-eventmachine (v0.12.9, C:/Ruby192/lib/ruby/gems/1.9.1/gems/eventmachine-eventmachine-0.12.9)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] librex (v0.0.35, C:/Ruby192/lib/ruby/gems/1.9.1/gems/librex-0.0.35)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] nexpose (v0.0.4, C:/Ruby192/lib/ruby/gems/1.9.1/gems/nexpose-0.0.4)" level="application" />
   </component>
 </module>
 
