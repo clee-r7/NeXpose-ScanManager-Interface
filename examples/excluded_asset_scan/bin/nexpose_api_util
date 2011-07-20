@@ -1,0 +1,51 @@
+#!/usr/bin/env ruby
+
+require File.expand_path(File.join(File.dirname(__FILE__), '../lib/extended-api.rb'))
+
+#------------------------------------------------------------------------------------------------------
+# == Synopsis
+# Main script to execute specified  API commands against a specified NSC
+#
+# == Usage
+# ruby nexpose_api_util.rb --help
+#
+# == Author
+# Christopher Lee, Rapid7 LLC
+#------------------------------------------------------------------------------------------------------
+
+begin
+	if ARGV.length > 0
+		$is_command_line = false
+		begin
+			options = Options.parse ARGV
+			extended_api = ::ExtendedAPI.new options.user, options.password, options.host
+			extended_api.do_login
+			case options.key
+				when 1 then
+					extended_api.print_asset_groups
+				when 2 then
+					extended_api.print_asset_group_info options.args
+				when 3 then
+					extended_api.start_excluded_scan options.args
+				else
+					puts "Invalid Input!"
+			end
+
+		rescue Exception => e
+			puts e
+		ensure
+			begin
+				if extended_api
+					extended_api.do_logout
+				end
+			rescue Nexpose::APIError => e
+				# Don't care, maybe session already dead
+			end
+		end
+		exit 0
+	else
+		puts 'Input required'
+	end
+end
+
+
